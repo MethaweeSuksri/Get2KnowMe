@@ -646,7 +646,9 @@ a.chip:hover {
 }
 
 .res-section {
-  margin: 8px 0 5px;
+  /* Reference used 8px/5px; tightened to hold resume.pageLimit at one A4
+     page after the longer ELK bullet replaced a one-liner. */
+  margin: 6px 0 4px;
 }
 
 .res-h2 {
@@ -661,7 +663,7 @@ a.chip:hover {
 }
 
 .res-item {
-  margin: 0 0 5px;
+  margin: 0 0 4px;
 }
 
 .res-row {

@@ -382,15 +382,6 @@
       "surface": "both"
     },
     {
-      "id": "docker",
-      "label": "Docker",
-      "category": "tools-systems",
-      "surface": "both",
-      "contexts": [
-        "TODO: point at a compose file or cut this skill."
-      ]
-    },
-    {
       "id": "elk",
       "label": "ELK Stack",
       "category": "tools-systems",
@@ -547,16 +538,6 @@
       "shortLabel": "Mobile Dev"
     },
     {
-      "id": "pathfinding",
-      "label": "Pathfinding Algorithms",
-      "category": "cs-fundamentals",
-      "surface": "web",
-      "contexts": [
-        "Coursework only — no project here implements pathfinding. Cut unless you can point at code."
-      ],
-      "shortLabel": "Pathfinding"
-    },
-    {
       "id": "scrum",
       "label": "Scrum",
       "category": "sdlc",
@@ -708,15 +689,6 @@
           "surface": "both"
         },
         {
-          "text": "Owned features end to end, validating behavior with the QA tester and end users before release.",
-          "skills": [
-            "collaboration",
-            "testing-tech",
-            "unit-testing"
-          ],
-          "surface": "both"
-        },
-        {
           "text": "Designed the logging data model and implemented instrumentation to track feature usage and adoption rate, then worked with the system administrator to surface it in ELK dashboards.",
           "skills": [
             "observability",
@@ -724,6 +696,15 @@
             "db-design",
             "event-driven",
             "python"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Owned features end to end, validating behavior with the QA tester and end users before release.",
+          "skills": [
+            "collaboration",
+            "testing-tech",
+            "unit-testing"
           ],
           "surface": "both"
         },
@@ -1450,7 +1431,8 @@
       "engineeringBlocksExcluded": "`engineering` is web-only. It is depth for a reviewer who expanded a project, never resume copy.",
       "privateBlocksExcluded": "Any key beginning with `_` is excluded from every output.",
       "overflowStrategy": "Drop lowest-priority items first, then trim to maxHighlightsPerItem, then drop skills with no linked project or experience.",
-      "minPriority": 40
+      "minPriority": 40,
+      "maxSkillsPerCategoryLine": 6
     }
   },
   "site": {

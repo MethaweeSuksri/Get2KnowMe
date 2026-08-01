@@ -16,9 +16,8 @@ export default function Header({ back = false }: { back?: boolean }) {
           </Link>
         )}
         <nav className="header-nav" aria-label="Site">
-          <Link className="quiet-link" href="/play">
-            Get Creative
-          </Link>
+          {/* "Get Creative" returns here once /play exists — a dead link in
+              the sticky header is worse than no link. */}
           <a className="btn-filled" href={`/${resumeConfig.fileName}`} download>
             ↓ Résumé
           </a>

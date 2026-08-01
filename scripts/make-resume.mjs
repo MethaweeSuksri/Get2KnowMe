@@ -65,7 +65,7 @@ try {
       path: outPath,
       format: "A4",
       printBackground: false,
-      margin: { top: "13mm", bottom: "13mm", left: "13mm", right: "13mm" },
+      margin: { top: "12mm", bottom: "12mm", left: "12mm", right: "12mm" },
     });
   } finally {
     await browser.close();

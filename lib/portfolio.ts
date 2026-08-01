@@ -187,7 +187,6 @@ export const forWeb = surfaceFilter(["both", "web"]);
 
 const RESUME_PROJECT_HIGHLIGHTS = 1; // overflow trim: one bullet per project fits pageLimit 1
 const RESUME_TECH_LINE_SKILLS = 6;
-const RESUME_SKILLS_PER_LINE = 6; // overflow trim: matches the approved reference's density
 const RESUME_EXPERIENCE_HIGHLIGHTS = 2; // overflow trim below rules.maxHighlightsPerItem to hold pageLimit 1
 
 export interface ResumeModel {
@@ -231,7 +230,7 @@ export function buildResumeModel(): ResumeModel {
       category: category.label,
       labels: (skillsByCategory.get(category.id) ?? [])
         .filter((s) => onResume(s) && skillHasEvidence(s.id))
-        .slice(0, RESUME_SKILLS_PER_LINE)
+        .slice(0, rules.maxSkillsPerCategoryLine)
         .map((s) => s.label),
     }))
     .filter((line) => line.labels.length > 0);

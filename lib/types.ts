@@ -143,6 +143,7 @@ export interface ResumeRules {
   includeSurfaces: Surface[];
   maxProjects: number;
   maxHighlightsPerItem: number;
+  maxSkillsPerCategoryLine: number;
   engineeringBlocksExcluded: string;
   privateBlocksExcluded: string;
   overflowStrategy: string;
