@@ -1,0 +1,1479 @@
+{
+  "meta": {
+    "schemaVersion": "3.1.0",
+    "lastUpdated": "2026-07-29",
+    "note": "Single source of truth. The website, the resume PDF, and every emphasis mode are generated from this file. Do not duplicate content anywhere else."
+  },
+  "profile": {
+    "fullName": "Methawee Suksri",
+    "preferredName": "Methawee",
+    "headline": "Computer Science graduate, Thammasat University",
+    "targetRoles": [
+      "Software Engineer (New Grad)",
+      "Backend Engineer",
+      "Graphics / Rendering Engineer"
+    ],
+    "location": {
+      "city": "Bangkok",
+      "country": "Thailand"
+    },
+    "availability": "Available immediately",
+    "contact": {
+      "email": {
+        "value": "methaweesuksri@gmail.com",
+        "surface": "both"
+      },
+      "linkedin": {
+        "value": "https://www.linkedin.com/in/methawee-suksri-301852357",
+        "surface": "both"
+      },
+      "github": {
+        "value": "https://github.com/MethaweeSuksri",
+        "surface": "both",
+        "label": "Personal"
+      },
+      "githubUniversity": {
+        "value": "https://github.com/Methawee6509611999",
+        "surface": "both",
+        "label": "University"
+      },
+      "website": {
+        "value": null,
+        "surface": "resume",
+        "note": "This portfolio's own URL. Goes on the PDF; redundant on the site itself."
+      }
+    },
+    "careerObjective": "To contribute to software that delivers real value, applying my development and problem-solving skills in a role that keeps expanding them.",
+    "summary": "Computer Science graduate from Thammasat University (First Class Honours, GPAX 3.75) with two software internships spanning C#/.NET desktop tooling and Python/C++ graphics development. Experienced across web, mobile, and desktop applications, with foundations in networking, operating systems, system design, and computer graphics."
+  },
+  "domains": [
+    {
+      "id": "backend",
+      "label": "Backend",
+      "color": "domain-1"
+    },
+    {
+      "id": "web",
+      "label": "Web",
+      "color": "domain-2"
+    },
+    {
+      "id": "graphics",
+      "label": "Graphics",
+      "color": "domain-3"
+    },
+    {
+      "id": "systems",
+      "label": "Systems",
+      "color": "domain-4"
+    },
+    {
+      "id": "mobile",
+      "label": "Mobile",
+      "color": "domain-5"
+    },
+    {
+      "id": "gamedev",
+      "label": "Game Dev",
+      "color": "domain-6"
+    },
+    {
+      "id": "tooling",
+      "label": "Tooling",
+      "color": "domain-7"
+    }
+  ],
+  "skillCategories": [
+    {
+      "id": "languages",
+      "label": "Programming Languages"
+    },
+    {
+      "id": "web-backend",
+      "label": "Web & Backend Development"
+    },
+    {
+      "id": "graphics",
+      "label": "Graphics, Imaging & Real-Time Rendering"
+    },
+    {
+      "id": "databases-cloud",
+      "label": "Databases & Cloud"
+    },
+    {
+      "id": "tools-systems",
+      "label": "Tools & Systems"
+    },
+    {
+      "id": "cs-fundamentals",
+      "label": "Computer Science Fundamentals"
+    },
+    {
+      "id": "sdlc",
+      "label": "Software Development Process"
+    },
+    {
+      "id": "leadership",
+      "label": "Leadership & Collaboration"
+    }
+  ],
+  "skills": [
+    {
+      "id": "python",
+      "label": "Python",
+      "category": "languages",
+      "surface": "both"
+    },
+    {
+      "id": "cpp",
+      "label": "C/C++",
+      "category": "languages",
+      "surface": "both"
+    },
+    {
+      "id": "java",
+      "label": "Java",
+      "category": "languages",
+      "surface": "both"
+    },
+    {
+      "id": "javascript",
+      "label": "JavaScript",
+      "category": "languages",
+      "surface": "both"
+    },
+    {
+      "id": "csharp",
+      "label": "C#",
+      "category": "languages",
+      "surface": "both"
+    },
+    {
+      "id": "glsl",
+      "label": "GLSL",
+      "category": "languages",
+      "surface": "both"
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "category": "web-backend",
+      "surface": "both"
+    },
+    {
+      "id": "react-router",
+      "label": "React Router",
+      "category": "web-backend",
+      "surface": "web"
+    },
+    {
+      "id": "nodejs",
+      "label": "Node.js",
+      "category": "web-backend",
+      "surface": "both"
+    },
+    {
+      "id": "express",
+      "label": "Express.js",
+      "category": "web-backend",
+      "surface": "both"
+    },
+    {
+      "id": "mongoose",
+      "label": "Mongoose (ODM)",
+      "category": "web-backend",
+      "surface": "both",
+      "shortLabel": "Mongoose"
+    },
+    {
+      "id": "html-css",
+      "label": "HTML & CSS",
+      "category": "web-backend",
+      "surface": "both"
+    },
+    {
+      "id": "rest-api",
+      "label": "RESTful API Design",
+      "category": "web-backend",
+      "surface": "both",
+      "shortLabel": "REST APIs"
+    },
+    {
+      "id": "session-auth",
+      "label": "Session-Based Authentication",
+      "category": "web-backend",
+      "surface": "both",
+      "shortLabel": "Session Auth"
+    },
+    {
+      "id": "mvc",
+      "label": "MVC Architecture",
+      "category": "web-backend",
+      "surface": "both",
+      "shortLabel": "MVC"
+    },
+    {
+      "id": "event-driven",
+      "label": "Event-Driven Architecture",
+      "category": "web-backend",
+      "surface": "both",
+      "shortLabel": "Event-Driven"
+    },
+    {
+      "id": "server-rendering",
+      "label": "Server-Side Rendering (EJS)",
+      "category": "web-backend",
+      "surface": "web",
+      "shortLabel": "SSR (EJS)"
+    },
+    {
+      "id": "opengl",
+      "label": "OpenGL",
+      "category": "graphics",
+      "surface": "both"
+    },
+    {
+      "id": "webgl2",
+      "label": "WebGL2",
+      "category": "graphics",
+      "surface": "both"
+    },
+    {
+      "id": "threejs",
+      "label": "Three.js",
+      "category": "graphics",
+      "surface": "both"
+    },
+    {
+      "id": "cannonjs",
+      "label": "cannon-es",
+      "category": "graphics",
+      "surface": "both"
+    },
+    {
+      "id": "sdl",
+      "label": "SDL",
+      "category": "graphics",
+      "surface": "both"
+    },
+    {
+      "id": "glfw",
+      "label": "GLFW",
+      "category": "graphics",
+      "surface": "web"
+    },
+    {
+      "id": "glm",
+      "label": "GLM",
+      "category": "graphics",
+      "surface": "web"
+    },
+    {
+      "id": "stb-image",
+      "label": "stb_image",
+      "category": "graphics",
+      "surface": "web"
+    },
+    {
+      "id": "gpu-prog",
+      "label": "GPU Programming",
+      "category": "graphics",
+      "surface": "both",
+      "shortLabel": "GPU"
+    },
+    {
+      "id": "render-pipe",
+      "label": "Graphics Rendering Pipeline",
+      "category": "graphics",
+      "surface": "both",
+      "shortLabel": "Rendering Pipeline"
+    },
+    {
+      "id": "physics-sim",
+      "label": "Physics Simulation",
+      "category": "graphics",
+      "surface": "both",
+      "shortLabel": "Physics"
+    },
+    {
+      "id": "opencv",
+      "label": "OpenCV",
+      "category": "graphics",
+      "surface": "both"
+    },
+    {
+      "id": "dip",
+      "label": "Digital Image Processing",
+      "category": "graphics",
+      "surface": "both",
+      "shortLabel": "Image Processing"
+    },
+    {
+      "id": "img-stitch",
+      "label": "Image Stitching",
+      "category": "graphics",
+      "surface": "both",
+      "shortLabel": "Stitching"
+    },
+    {
+      "id": "feature-matching",
+      "label": "Feature Detection & Matching",
+      "category": "graphics",
+      "surface": "both",
+      "shortLabel": "Feature Matching"
+    },
+    {
+      "id": "homography",
+      "label": "Homography & RANSAC",
+      "category": "graphics",
+      "surface": "both",
+      "shortLabel": "Homography"
+    },
+    {
+      "id": "sql",
+      "label": "SQL",
+      "category": "databases-cloud",
+      "surface": "both"
+    },
+    {
+      "id": "mongodb",
+      "label": "MongoDB",
+      "category": "databases-cloud",
+      "surface": "both"
+    },
+    {
+      "id": "db-design",
+      "label": "Database Design & Implementation",
+      "category": "databases-cloud",
+      "surface": "both",
+      "shortLabel": "Database Design"
+    },
+    {
+      "id": "er-model",
+      "label": "Entity-Relationship Modeling",
+      "category": "databases-cloud",
+      "surface": "both",
+      "shortLabel": "ER Modelling"
+    },
+    {
+      "id": "rel-algebra",
+      "label": "Relational Algebra",
+      "category": "databases-cloud",
+      "surface": "web",
+      "shortLabel": "Rel. Algebra"
+    },
+    {
+      "id": "git",
+      "label": "Git & GitHub",
+      "category": "tools-systems",
+      "surface": "both",
+      "shortLabel": "Git"
+    },
+    {
+      "id": "cmake",
+      "label": "CMake",
+      "category": "tools-systems",
+      "surface": "both"
+    },
+    {
+      "id": "make",
+      "label": "Make",
+      "category": "tools-systems",
+      "surface": "both"
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "category": "tools-systems",
+      "surface": "both",
+      "contexts": [
+        "TODO: point at a compose file or cut this skill."
+      ]
+    },
+    {
+      "id": "elk",
+      "label": "ELK Stack",
+      "category": "tools-systems",
+      "surface": "both"
+    },
+    {
+      "id": "linux",
+      "label": "Linux (Debian)",
+      "category": "tools-systems",
+      "surface": "both",
+      "shortLabel": "Linux"
+    },
+    {
+      "id": "bash",
+      "label": "Bash Scripting",
+      "category": "tools-systems",
+      "surface": "both",
+      "contexts": [
+        "Daily driver on Debian; scripting for personal automation and build tasks"
+      ]
+    },
+    {
+      "id": "ci-cd",
+      "label": "CI/CD",
+      "category": "tools-systems",
+      "surface": "both"
+    },
+    {
+      "id": "observability",
+      "label": "Observability & Logging",
+      "category": "tools-systems",
+      "surface": "both",
+      "shortLabel": "Observability"
+    },
+    {
+      "id": "ffmpeg",
+      "label": "ffmpeg",
+      "category": "tools-systems",
+      "surface": "web"
+    },
+    {
+      "id": "cli-tools",
+      "label": "CLI Tool Development",
+      "category": "tools-systems",
+      "surface": "both",
+      "shortLabel": "CLI Tools"
+    },
+    {
+      "id": "android-studio",
+      "label": "Android Studio",
+      "category": "tools-systems",
+      "surface": "both"
+    },
+    {
+      "id": "dotnet",
+      "label": ".NET Framework",
+      "category": "tools-systems",
+      "surface": "both",
+      "shortLabel": ".NET"
+    },
+    {
+      "id": "wmi",
+      "label": "WMI",
+      "category": "tools-systems",
+      "surface": "both"
+    },
+    {
+      "id": "mdm",
+      "label": "Mobile Device Management",
+      "category": "tools-systems",
+      "surface": "web",
+      "shortLabel": "MDM"
+    },
+    {
+      "id": "nextcloud",
+      "label": "Self-Hosted Nextcloud",
+      "category": "tools-systems",
+      "surface": "web",
+      "contexts": [
+        "Self-hosted on a Debian box over a local network, for personal file sync"
+      ],
+      "shortLabel": "Nextcloud"
+    },
+    {
+      "id": "dsa",
+      "label": "Data Structures & Algorithms",
+      "category": "cs-fundamentals",
+      "surface": "both",
+      "shortLabel": "Algorithms"
+    },
+    {
+      "id": "state-machine",
+      "label": "State Machine Design",
+      "category": "cs-fundamentals",
+      "surface": "both",
+      "shortLabel": "State Machines"
+    },
+    {
+      "id": "plc",
+      "label": "Programming Language Concepts & Paradigms",
+      "category": "cs-fundamentals",
+      "surface": "both",
+      "contexts": [
+        "Coursework",
+        "Applied across five languages in the projects listed here"
+      ],
+      "shortLabel": "Language Concepts"
+    },
+    {
+      "id": "networking",
+      "label": "Computer Networking",
+      "category": "cs-fundamentals",
+      "surface": "both",
+      "contexts": [
+        "Coursework",
+        "Local network administration for self-hosted services"
+      ],
+      "shortLabel": "Networking"
+    },
+    {
+      "id": "os-concepts",
+      "label": "Operating Systems",
+      "category": "cs-fundamentals",
+      "surface": "both",
+      "contexts": [
+        "Coursework",
+        "Windows deployment, imaging and MDM rollout during the RCP internship"
+      ]
+    },
+    {
+      "id": "comp-org",
+      "label": "Computer Organization",
+      "category": "cs-fundamentals",
+      "surface": "web",
+      "contexts": [
+        "Coursework"
+      ],
+      "shortLabel": "Comp. Organisation"
+    },
+    {
+      "id": "system-design",
+      "label": "System Design",
+      "category": "cs-fundamentals",
+      "surface": "both",
+      "contexts": [
+        "Coursework"
+      ]
+    },
+    {
+      "id": "mobile-dev",
+      "label": "Mobile Application Development",
+      "category": "cs-fundamentals",
+      "surface": "both",
+      "shortLabel": "Mobile Dev"
+    },
+    {
+      "id": "pathfinding",
+      "label": "Pathfinding Algorithms",
+      "category": "cs-fundamentals",
+      "surface": "web",
+      "contexts": [
+        "Coursework only — no project here implements pathfinding. Cut unless you can point at code."
+      ],
+      "shortLabel": "Pathfinding"
+    },
+    {
+      "id": "scrum",
+      "label": "Scrum",
+      "category": "sdlc",
+      "surface": "both"
+    },
+    {
+      "id": "unit-testing",
+      "label": "Unit Testing",
+      "category": "sdlc",
+      "surface": "both"
+    },
+    {
+      "id": "srs",
+      "label": "Software Requirements Specification",
+      "category": "sdlc",
+      "surface": "both",
+      "shortLabel": "Requirements"
+    },
+    {
+      "id": "testing-tech",
+      "label": "Software Testing Techniques",
+      "category": "sdlc",
+      "surface": "both",
+      "shortLabel": "Testing"
+    },
+    {
+      "id": "code-review",
+      "label": "Code Review",
+      "category": "sdlc",
+      "surface": "web"
+    },
+    {
+      "id": "team-lead",
+      "label": "Team Leadership",
+      "category": "leadership",
+      "surface": "both",
+      "shortLabel": "Team Lead"
+    },
+    {
+      "id": "sprint-plan",
+      "label": "Sprint Planning",
+      "category": "leadership",
+      "surface": "both",
+      "shortLabel": "Sprints"
+    },
+    {
+      "id": "deadline-mgmt",
+      "label": "Deadline Management",
+      "category": "leadership",
+      "surface": "both",
+      "shortLabel": "Deadlines"
+    },
+    {
+      "id": "conflict-res",
+      "label": "Conflict Resolution",
+      "category": "leadership",
+      "surface": "both",
+      "shortLabel": "Conflict Res."
+    },
+    {
+      "id": "collaboration",
+      "label": "Cross-Functional Collaboration",
+      "category": "leadership",
+      "surface": "both",
+      "shortLabel": "Collaboration"
+    },
+    {
+      "id": "meeting-fac",
+      "label": "Meeting Facilitation",
+      "category": "leadership",
+      "surface": "both",
+      "shortLabel": "Meetings"
+    },
+    {
+      "id": "req-gather",
+      "label": "Requirements Gathering",
+      "category": "leadership",
+      "surface": "both",
+      "shortLabel": "Req. Gathering"
+    }
+  ],
+  "education": [
+    {
+      "id": "tu-cs",
+      "institution": "Thammasat University",
+      "degree": "Bachelor of Science in Computer Science",
+      "major": "Computer and Information Science",
+      "startDate": "2022-08",
+      "endDate": "2026-07",
+      "status": "graduated",
+      "gpax": 3.75,
+      "gpaScale": 4,
+      "honors": "First Class Honours",
+      "honorsStatus": "conferred",
+      "location": "Bangkok, Thailand",
+      "relevantCoursework": [
+        {
+          "code": "CS251",
+          "name": "Database Systems"
+        },
+        {
+          "code": "CS299",
+          "name": "Web Application Development"
+        },
+        {
+          "code": "CS361",
+          "name": "Mobile Application Development"
+        },
+        {
+          "code": "CS369",
+          "name": "Web Application Development"
+        },
+        {
+          "code": "CS381",
+          "name": "Digital Image Processing"
+        }
+      ],
+      "surface": "both"
+    }
+  ],
+  "experience": [
+    {
+      "id": "yannix",
+      "company": "Yannix Co., Ltd.",
+      "role": "Software Engineer Intern",
+      "startDate": "2026-01",
+      "endDate": "2026-05",
+      "location": "Bangkok, Thailand",
+      "type": "internship",
+      "domains": [
+        "graphics",
+        "systems",
+        "tooling"
+      ],
+      "summary": "Shipped production features in a C++/Python graphics codebase and built the observability pipeline the team used to measure feature adoption.",
+      "highlights": [
+        {
+          "text": "Developed features in Python and C++ against an internal MVC framework built on OpenGL and SDL, delivering production-ready code with accompanying unit tests.",
+          "skills": [
+            "python",
+            "cpp",
+            "opengl",
+            "sdl",
+            "mvc",
+            "unit-testing",
+            "gpu-prog",
+            "render-pipe"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Owned features end to end, validating behavior with the QA tester and end users before release.",
+          "skills": [
+            "collaboration",
+            "testing-tech",
+            "unit-testing"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Designed the logging data model and implemented instrumentation to track feature usage and adoption rate, then worked with the system administrator to surface it in ELK dashboards.",
+          "skills": [
+            "observability",
+            "elk",
+            "db-design",
+            "event-driven",
+            "python"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Worked in a Scrum team practicing continuous integration and continuous delivery, using the Make build system.",
+          "skills": [
+            "scrum",
+            "ci-cd",
+            "make",
+            "git"
+          ],
+          "surface": "both"
+        }
+      ],
+      "skills": [
+        "python",
+        "cpp",
+        "opengl",
+        "sdl",
+        "make",
+        "elk",
+        "gpu-prog",
+        "render-pipe",
+        "observability",
+        "mvc",
+        "event-driven",
+        "scrum",
+        "ci-cd",
+        "unit-testing",
+        "git",
+        "db-design",
+        "collaboration",
+        "testing-tech"
+      ],
+      "surface": "both",
+      "priority": 100
+    },
+    {
+      "id": "rcp",
+      "company": "Ruam Charoen Pattana Public Company Limited",
+      "role": "IT Support & Software Developer Intern",
+      "startDate": "2025-07",
+      "endDate": "2025-12",
+      "location": "Thailand",
+      "type": "internship",
+      "domains": [
+        "systems",
+        "tooling"
+      ],
+      "summary": "Identified IT department pain points and built an internal diagnostic tool that let support staff pull workstation hardware and OS data remotely.",
+      "highlights": [
+        {
+          "text": "Built an internal Windows workstation diagnostic tool in C# and .NET that remotely collects hardware and operating system data via WMI, wrapping raw WMI queries behind a GUI so support staff could run diagnostics without writing queries themselves.",
+          "skills": [
+            "csharp",
+            "dotnet",
+            "wmi",
+            "cli-tools",
+            "os-concepts"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Interviewed IT department staff to identify operational pain points, then scoped both technical and non-technical solutions against their requirements.",
+          "skills": [
+            "req-gather",
+            "srs",
+            "collaboration"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Deployed corporate mobile device management (MDM) software and supported employees through data migration to new operating systems.",
+          "skills": [
+            "mdm",
+            "os-concepts"
+          ],
+          "surface": "web"
+        },
+        {
+          "text": "Performed hardware repair and Windows deployment via disk cloning.",
+          "skills": [
+            "os-concepts"
+          ],
+          "surface": "web"
+        }
+      ],
+      "skills": [
+        "csharp",
+        "dotnet",
+        "wmi",
+        "mdm",
+        "os-concepts",
+        "req-gather",
+        "srs",
+        "collaboration",
+        "cli-tools"
+      ],
+      "surface": "both",
+      "priority": 80
+    }
+  ],
+  "projects": [
+    {
+      "id": "rubhew",
+      "title": "RubHew",
+      "tagline": "Campus delivery marketplace — students carry canteen orders back for each other",
+      "context": "Final project, CS369 Web Application Development",
+      "year": 2025,
+      "domains": [
+        "web",
+        "backend"
+      ],
+      "repoUrl": "https://github.com/MethaweeSuksri/Rubhew.git",
+      "demoUrl": null,
+      "media": [],
+      "team": {
+        "size": 5,
+        "role": "Team Lead"
+      },
+      "summary": "I owned the backend end to end while leading the team. The design problem that shaped everything: two parties act on the same order at different times, so one status field was never going to be enough.",
+      "highlights": [
+        {
+          "text": "Designed and implemented the backend: an 18-endpoint API over route, controller and model layers, session authentication with bcrypt, and all database operations.",
+          "skills": [
+            "rest-api",
+            "session-auth",
+            "express",
+            "nodejs",
+            "mongodb",
+            "mongoose",
+            "mvc"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Modelled the two-sided order lifecycle as independent delivery and payment state machines advanced by different parties, with per-carrier capacity and fees applied at pricing time.",
+          "skills": [
+            "db-design",
+            "state-machine",
+            "mongodb",
+            "mongoose"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Reviewed and tested frontend features contributed by the rest of the team before merge.",
+          "skills": [
+            "code-review",
+            "react",
+            "testing-tech"
+          ],
+          "surface": "both"
+        }
+      ],
+      "engineering": {
+        "architecture": "Backend and Frontend are separate npm packages talking over CRA's dev proxy. The backend is ESM Express 5 in three layers — app.js registers routes, controllers.js holds all eighteen handlers, models.js owns the schemas and connection — over three collections: User, Order, Menu. The modelling choice worth explaining is that a 'carry my order' post is not its own collection: a post IS a User with availablefororder > 0, so the feed is a query over users.",
+        "decisions": [
+          {
+            "what": "Two independent state machines on one order rather than one combined status.",
+            "why": "Delivery (buying → delivering → delivered) is advanced only by the carrier; payment (unpaid → pending → paid) is claimed by the buyer and confirmed by the carrier. Two parties, two transitions.",
+            "instead": "A single enum encoding the cross product of both.",
+            "ref": "models.js:41-42; controllers.js:384, :406, :463-490"
+          },
+          {
+            "what": "Server-side sessions over JWT, storing both username and studentId.",
+            "why": "Handlers scope every query by student without a second lookup. Passwords are bcrypt at cost 10 — a deliberate correction of the unsalted SHA-256 I used in the earlier Library project.",
+            "instead": "Stateless signed tokens.",
+            "ref": "app.js:34-38; controllers.js:38-39, :81-82"
+          },
+          {
+            "what": "Pricing happens after ordering, not before.",
+            "why": "The buyer cannot know shop prices, so they submit items unpriced; the carrier fills unit prices at the counter and the total recomputes as base fee plus (unit price + per-item fee) × count.",
+            "instead": "A fixed menu with prices set upfront.",
+            "ref": "controllers.js:439-446"
+          },
+          {
+            "what": "Documents related by studentId string, with no ObjectId refs and no populate.",
+            "why": "Every join stays an explicit second query, which keeps the data flow readable.",
+            "instead": "Mongoose refs — at the cost of referential integrity Mongo will not enforce either way.",
+            "ref": "controllers.js:343, :434-436"
+          }
+        ]
+      },
+      "skills": [
+        "javascript",
+        "nodejs",
+        "express",
+        "mongodb",
+        "mongoose",
+        "react",
+        "react-router",
+        "html-css",
+        "rest-api",
+        "session-auth",
+        "mvc",
+        "db-design",
+        "state-machine",
+        "code-review",
+        "testing-tech",
+        "team-lead",
+        "sprint-plan",
+        "deadline-mgmt"
+      ],
+      "featured": true,
+      "surface": "both",
+      "priority": 90
+    },
+    {
+      "id": "video-stitching",
+      "title": "Video Frame Stitching Tool",
+      "tagline": "Panorama stitcher built from primitives: SIFT/ORB features, RANSAC homographies, feathered blending",
+      "context": "CS381 Digital Image Processing",
+      "year": 2025,
+      "domains": [
+        "tooling",
+        "graphics",
+        "systems"
+      ],
+      "repoUrl": "https://github.com/MethaweeSuksri/VideoFrameStitching.git",
+      "demoUrl": null,
+      "media": [],
+      "team": {
+        "size": 1,
+        "role": "Solo"
+      },
+      "summary": "No cv2.Stitcher. Every stage is assembled from primitives so each can be swapped and compared — detector, matcher, ratio test, RANSAC, chaining, canvas, blend. The pipeline streams, holding two frames of features and one warped frame at a time, because a long pan otherwise takes the canvas and the RAM with it.",
+      "highlights": [
+        {
+          "text": "Built a panorama stitcher from the underlying operations rather than a library stitcher: SIFT and ORB backends behind one interface, Lowe's ratio test over kNN matches, and RANSAC homography estimation per frame pair.",
+          "skills": [
+            "python",
+            "opencv",
+            "img-stitch",
+            "feature-matching",
+            "homography",
+            "dip"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Chained pairwise homographies into a global reference frame with middle-frame re-centering, rejecting implausible transforms via SVD conditioning and projected-corner geometry before they could corrupt the chain.",
+          "skills": [
+            "homography",
+            "dsa",
+            "python"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Implemented streaming warp and blend: a canvas auto-sized from projected frame corners, feathered alpha weighting, and a running weighted average that holds one frame at a time.",
+          "skills": [
+            "img-stitch",
+            "dip",
+            "python"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Wrapped it in a CLI that extracts frames with ffmpeg, runs all four detector-matcher combinations into separate folders for comparison, and re-encodes an annotated H.264 walkthrough.",
+          "skills": [
+            "cli-tools",
+            "ffmpeg",
+            "python"
+          ],
+          "surface": "web"
+        }
+      ],
+      "engineering": {
+        "architecture": "Ten modules under stitch/, one per pipeline stage, wired by main.py. features.py exposes SIFT and ORB behind a Protocol that also carries a DescriptorSpec; matching.py reads that spec to pick metric and index; geometry.py estimates and chains homographies; warp.py sizes the canvas and blends. It streams by design: keypoints and descriptors are held for exactly two frames, and the blend accumulates into one float32 buffer pair rather than collecting warped frames.",
+        "decisions": [
+          {
+            "what": "Assembled from primitives rather than calling cv2.Stitcher.",
+            "why": "Every stage stays separable, so all four detector×matcher combinations can run over the same frames into separate output folders and be compared directly.",
+            "instead": "One library call that works and teaches nothing.",
+            "ref": "recipes.py:38-43"
+          },
+          {
+            "what": "Descriptor type drives matcher configuration instead of being hardcoded.",
+            "why": "SIFT is tagged FLOAT and ORB BINARY, so the matcher picks NORM_L2 vs NORM_HAMMING and KD-tree vs LSH. KD-tree FLANN on ORB is a real mistake — those trees assume Euclidean geometry, and binary descriptors are not in that space.",
+            "instead": "A hardcoded matcher, which silently degrades on one of the two backends.",
+            "ref": "features.py:62, :67; matching.py:60-81"
+          },
+          {
+            "what": "Consecutive-pair homographies chained, with the global reference at the middle frame rather than frame 0.",
+            "why": "Neighbouring frames overlap heavily so their matches are reliable; re-centering on the middle splits accumulated drift across both halves instead of piling it at one end.",
+            "instead": "Matching every frame to a single reference — fewer drift compounds, far weaker matches.",
+            "ref": "geometry.py:123-135, :138-150; config.py:30"
+          },
+          {
+            "what": "Feathering by Gaussian blur of the validity mask rather than a distance transform.",
+            "why": "Full-canvas distanceTransform per frame was the bottleneck on wide panoramas; the separable blur gives the same soft edge far cheaper.",
+            "instead": "distanceTransform — more correct, measurably too slow here.",
+            "ref": "warp.py:96-111"
+          }
+        ]
+      },
+      "skills": [
+        "python",
+        "opencv",
+        "img-stitch",
+        "feature-matching",
+        "homography",
+        "dip",
+        "ffmpeg",
+        "cli-tools",
+        "dsa",
+        "linux"
+      ],
+      "featured": true,
+      "surface": "both",
+      "priority": 88
+    },
+    {
+      "id": "threejs-shooter",
+      "title": "Three.js Shooter",
+      "tagline": "WebGL2 first-person shooter with rigid-body physics and continuous enemy spawning",
+      "context": "CS299 Web Application Development",
+      "year": 2025,
+      "domains": [
+        "graphics",
+        "gamedev",
+        "web"
+      ],
+      "repoUrl": "https://github.com/Methawee6509611999/299-Project-Threejs-Shooter.git",
+      "demoUrl": null,
+      "media": [],
+      "team": {
+        "size": 3,
+        "role": "Team Lead"
+      },
+      "summary": "The interesting part is the seam between two systems that each want to own an object's position: the physics world and the render scene graph. I built both sides and the gameplay layer on top of them.",
+      "highlights": [
+        {
+          "text": "Built the 3D renderer with Three.js on WebGL2 and integrated cannon-es for rigid-body physics, reconciling the render scene and the physics world every frame.",
+          "skills": [
+            "threejs",
+            "webgl2",
+            "cannonjs",
+            "physics-sim",
+            "render-pipe"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Implemented model importing, enemy spawning and steering, the projectile manager, and all core gameplay logic.",
+          "skills": [
+            "javascript",
+            "dsa",
+            "physics-sim"
+          ],
+          "surface": "both"
+        }
+      ],
+      "engineering": {
+        "architecture": "One ES module, no build step. Two worlds are maintained in parallel by hand — a THREE.Scene for rendering and a CANNON.World for simulation — with every entity a {body, mesh} pair held in one of two arrays, so the body's position can be copied onto its mesh each tick. The frame loop runs a fixed order: read buffered input, step the world at 1/60, attach the camera to the player body, update both entity arrays, render.",
+        "decisions": [
+          {
+            "what": "Two engines kept in manual sync rather than one.",
+            "why": "Three.js renders and cannon-es simulates, with body.position copied onto mesh.position every frame.",
+            "instead": "Bounding-box collision in Three.js alone — cheaper, but no solver, no restitution, no inter-entity contacts.",
+            "ref": "main.js:11-12, :469-470, :534-535"
+          },
+          {
+            "what": "Enemies steered by writing a normalised direction-to-player vector into body.velocity, not by translating the mesh.",
+            "why": "The solver then handles enemies pushing each other apart when they bunch up. This is steering, not pathfinding — the arena is open, so there is nothing to path around.",
+            "instead": "Lerping mesh positions directly, which gives no inter-enemy collision at all.",
+            "ref": "main.js:474-484"
+          },
+          {
+            "what": "Input buffered into a keys object and only acted on inside the frame loop.",
+            "why": "Acting in the keydown handler couples movement speed to the OS key-repeat rate — that earlier version is still in the repo as backup.js.",
+            "instead": "Direct handling in the event callback.",
+            "ref": "main.js:330-344, :601; backup.js:130-140"
+          }
+        ]
+      },
+      "skills": [
+        "javascript",
+        "threejs",
+        "webgl2",
+        "cannonjs",
+        "physics-sim",
+        "render-pipe",
+        "dsa",
+        "team-lead",
+        "sprint-plan",
+        "deadline-mgmt"
+      ],
+      "featured": true,
+      "surface": "both",
+      "priority": 85
+    },
+    {
+      "id": "begin-opengl",
+      "title": "Begin OpenGL",
+      "tagline": "C++ renderer built from scratch: GLSL shader pipeline, CMake build, textured geometry",
+      "context": "Personal project",
+      "year": 2025,
+      "domains": [
+        "graphics",
+        "systems"
+      ],
+      "repoUrl": "https://github.com/MethaweeSuksri/Begin_OpenGl.git",
+      "demoUrl": null,
+      "media": [],
+      "team": {
+        "size": 1,
+        "role": "Solo"
+      },
+      "summary": "No engine, no framework. The original work here is the shader abstraction — file loading, compile and link with per-stage status checks, typed uniform setters — written to understand the pipeline rather than consume it. The README is a dated diary of what defeated me along the way.",
+      "highlights": [
+        {
+          "text": "Wrote the shader abstraction by hand: file loading with stream exception masks, compile and link with per-stage status checks and info-log reporting, and typed uniform setters.",
+          "skills": [
+            "glsl",
+            "opengl",
+            "render-pipe",
+            "gpu-prog",
+            "cpp"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Set up a C++ build pipeline with CMake, linking GLFW, OpenGL and X11 dependencies.",
+          "skills": [
+            "cpp",
+            "cmake",
+            "glfw",
+            "linux"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Integrated stb_image texture loading and applied multi-unit texturing to 3D cube meshes, with frame-rate-independent camera movement via delta time.",
+          "skills": [
+            "stb-image",
+            "opengl",
+            "glm"
+          ],
+          "surface": "both"
+        }
+      ],
+      "engineering": {
+        "architecture": "Four source files, no abstraction layers. main.cpp holds main(), every GLFW callback and the texture loader, following the numbered plan commented at the top: window setup, vertex preparation, shader, texture, render loop. Shader is the one real class, wrapping compile/link and the typed uniform setters. State the GLFW callbacks need sits at file scope, because C callbacks cannot capture.",
+        "decisions": [
+          {
+            "what": "Raw OpenGL with dependencies vendored into include/ rather than fetched by the build.",
+            "why": "The point was to see each stage of the pipeline, not to have a framework hide it.",
+            "instead": "GLFW as a git submodule — the README's own todo records this as deferred, not overlooked.",
+            "ref": "CMakeLists.txt; README.md"
+          },
+          {
+            "what": "Dynamic linking against a prebuilt lib/libglfw.so rather than static.",
+            "why": "Diary, 17/10/2025: the statically linked binary would not run on another machine, so shipping it in the repo was pointless, and I had not learned dynamic linking properly yet.",
+            "instead": "Static linking, which I tried first.",
+            "ref": "README.md:38; CMakeLists.txt:26"
+          },
+          {
+            "what": "Shader source read from disk at runtime by relative path, so the binary only runs from the project root.",
+            "why": "Diary, 28/10/2025: portable file reading in C++ defeated me and direct paths were the stopgap.",
+            "instead": "Embedding the GLSL as string literals, or resolving paths relative to the executable.",
+            "ref": "main.cpp:41; README.md:50"
+          },
+          {
+            "what": "The cube is 36 explicit vertices with no index buffer.",
+            "why": "Started with an EBO and dropped it — main.h still carries the commented-out loadBuffer signature that took an index array.",
+            "instead": "Indexed drawing, which is what I would use now.",
+            "ref": "main.cpp:48-90; main.h:14-16"
+          }
+        ]
+      },
+      "skills": [
+        "cpp",
+        "opengl",
+        "glsl",
+        "cmake",
+        "glfw",
+        "glm",
+        "stb-image",
+        "render-pipe",
+        "gpu-prog",
+        "linux"
+      ],
+      "featured": true,
+      "surface": "both",
+      "priority": 75
+    },
+    {
+      "id": "library-web-app",
+      "title": "Library Web Application",
+      "tagline": "Relational schema and borrow/reserve/return service for a library system",
+      "context": "CS251 Database Systems",
+      "year": 2024,
+      "domains": [
+        "backend",
+        "web"
+      ],
+      "repoUrl": "https://github.com/Methawee6509611999/CS251_lib.git",
+      "demoUrl": null,
+      "media": [],
+      "team": {
+        "size": 9,
+        "role": "Team Lead"
+      },
+      "summary": "My largest team at nine people. Most of the design effort went into the data model, built around the lifecycle a physical book moves through — available, borrowed, reserved, returned, awaiting staff confirmation — with the API as a thin layer over it.",
+      "highlights": [
+        {
+          "text": "Designed the entity-relationship model and derived the relational algebra behind library services such as book reservation.",
+          "skills": [
+            "er-model",
+            "rel-algebra",
+            "db-design",
+            "sql"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Implemented the backend and API layer with Node.js and Express, covering the borrow, reserve, return and staff-confirmation lifecycle, quota accounting, search, and the review and rating system.",
+          "skills": [
+            "nodejs",
+            "express",
+            "javascript",
+            "rest-api",
+            "session-auth",
+            "server-rendering"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Split schema ownership across a nine-person team while keeping the model coherent, resolving conflicting table designs before they reached implementation.",
+          "skills": [
+            "team-lead",
+            "conflict-res",
+            "meeting-fac",
+            "db-design"
+          ],
+          "surface": "web"
+        }
+      ],
+      "engineering": {
+        "architecture": "Two layers, no more. server.js is a single 1,031-line Express file holding every route, every query, the connection, the session config and the view engine. Rendering is split two ways: /book and /profile are server-rendered EJS, while every other page is a static HTML file that fetches JSON and builds its DOM client-side. Eight MySQL tables, with role modelled as row-existence in a librarian table rather than a column.",
+        "decisions": [
+          {
+            "what": "Role as row-existence in a librarian table, re-queried on every protected route.",
+            "why": "Keeps role assignment a data operation rather than a schema change, at the cost of one extra query per request.",
+            "instead": "A role column on users, or a flag cached in the session — the hardcoded username check it replaced is still there commented out.",
+            "ref": "server.js:140, :159, :173-176"
+          },
+          {
+            "what": "multipleStatements enabled so the borrow flow could send three dependent statements in one round trip, four for reserve-then-borrow.",
+            "why": "Batching, on a flow that touches three tables at once.",
+            "instead": "A real transaction — which is what this actually needed, since batching buys throughput and explicitly not atomicity.",
+            "ref": "server.js:21, :440-450, :476-489"
+          },
+          {
+            "what": "Book covers stored as longblob in MySQL and base64-encoded on every read.",
+            "why": "It put everything in one place and one backup.",
+            "instead": "Writing to disk with a path in the row — multer already writes the upload, and the code reads that file back purely to move its bytes into the database. The alternative was the better choice.",
+            "ref": "library.sql:27; server.js:271-279, :348-349"
+          }
+        ]
+      },
+      "skills": [
+        "javascript",
+        "nodejs",
+        "express",
+        "er-model",
+        "rel-algebra",
+        "db-design",
+        "sql",
+        "rest-api",
+        "session-auth",
+        "server-rendering",
+        "team-lead",
+        "sprint-plan",
+        "conflict-res",
+        "meeting-fac"
+      ],
+      "featured": false,
+      "surface": "both",
+      "priority": 70
+    },
+    {
+      "id": "werewolf-moderator",
+      "title": "Werewolf Game Moderator",
+      "tagline": "Android app that runs the moderator's role for an in-person game of Werewolf",
+      "context": "Final project, CS361 Mobile Application Development",
+      "year": 2024,
+      "domains": [
+        "mobile",
+        "gamedev"
+      ],
+      "repoUrl": "https://github.com/Methawee6509611999/CS361_Project_werewolf.git",
+      "demoUrl": null,
+      "media": [],
+      "team": {
+        "size": 3,
+        "role": "Team Lead"
+      },
+      "summary": "The moderator's job in Werewolf is pure state management, which made it a natural fit for an explicit phase state machine. The problem that made it interesting was physical rather than logical: how do you show one player their secret role on a phone everyone else can see?",
+      "highlights": [
+        {
+          "text": "Designed the moderator game logic: role allocation and shuffle, the day/night phase state machine, timed voting with forced resolution, and win-condition evaluation.",
+          "skills": [
+            "dsa",
+            "java",
+            "mobile-dev",
+            "state-machine"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Built the secret-role reveal on the accelerometer: the phone must be turned face-down and back up, with haptic confirmation, before a role is committed and the device passes to the next player.",
+          "skills": [
+            "java",
+            "mobile-dev"
+          ],
+          "surface": "both"
+        },
+        {
+          "text": "Implemented Activity logic and XML layouts in Android Studio, including screen flow and a hand-written animated-GIF view.",
+          "skills": [
+            "java",
+            "android-studio",
+            "mobile-dev"
+          ],
+          "surface": "both"
+        }
+      ],
+      "engineering": {
+        "architecture": "Nine Activities wired as a linear state machine through Intent extras, with no ViewModel, repository or singleton. The entire game state is one Parcelable ArrayList<Player> serialised into every Intent, alongside a 'time' string of day, night or seer that selects which behaviour a single shared GameActivity runs over one layout. The only durable state in the app is one SharedPreferences boolean.",
+        "decisions": [
+          {
+            "what": "A single-device moderator rather than networked play.",
+            "why": "It turns the secret-role problem from a networking problem into a physical one — which is where the interesting design work ended up.",
+            "instead": "One device per player over the network, which removes the problem entirely and with it the reason this project is worth discussing.",
+            "ref": "app architecture"
+          },
+          {
+            "what": "The role reveal is gated on hardware: a two-state accelerometer latch, face-down with haptic confirmation then face-up, before the player is committed.",
+            "why": "The phone physically cannot be showing a role while it is being passed, which a button press cannot guarantee.",
+            "instead": "A hold-to-reveal button, which is simpler and also works on devices without an accelerometer.",
+            "ref": "SetupActivity.java:124-161"
+          },
+          {
+            "what": "Animated GIFs rendered by a hand-written view driving android.graphics.Movie — frame time against uptimeMillis modulo duration, matrix scale derived in onSizeChanged, self-scheduling via invalidate().",
+            "why": "Worth writing once to understand how a self-invalidating custom view actually works.",
+            "instead": "Glide, which is declared in build.gradle and never imported — I took the dependency and then wrote the thing myself.",
+            "ref": "GifView.java:13-66; app/build.gradle:32-33"
+          }
+        ]
+      },
+      "skills": [
+        "java",
+        "android-studio",
+        "mobile-dev",
+        "dsa",
+        "state-machine",
+        "team-lead",
+        "sprint-plan",
+        "deadline-mgmt"
+      ],
+      "featured": false,
+      "surface": "both",
+      "priority": 60
+    }
+  ],
+  "leadership": [
+    {
+      "id": "team-leadership",
+      "title": "Technical Team Lead",
+      "context": "Four university project teams, ranging from 3 to 9 members",
+      "relatedProjects": [
+        "rubhew",
+        "threejs-shooter",
+        "library-web-app",
+        "werewolf-moderator"
+      ],
+      "highlights": [
+        {
+          "text": "Led four project teams ranging from 3 to 9 members, running sprint planning, distributing tasks, setting and enforcing deadlines, and facilitating meetings.",
+          "surface": "both"
+        },
+        {
+          "text": "Resolved scheduling and scope conflicts within teams while keeping delivery on schedule.",
+          "surface": "both"
+        }
+      ],
+      "skills": [
+        "team-lead",
+        "sprint-plan",
+        "deadline-mgmt",
+        "conflict-res",
+        "collaboration",
+        "meeting-fac"
+      ],
+      "surface": "both",
+      "priority": 70
+    }
+  ],
+  "resume": {
+    "fileName": "Methawee_Suksri_Resume.pdf",
+    "pageLimit": 1,
+    "generation": {
+      "method": "html-to-pdf",
+      "note": "MUST produce selectable text, not a canvas or image render. ATS parsers read the text layer; a rasterized PDF is invisible to them."
+    },
+    "sectionOrder": [
+      "profile",
+      "education",
+      "experience",
+      "projects",
+      "skills",
+      "leadership"
+    ],
+    "rules": {
+      "includeSurfaces": [
+        "both",
+        "resume"
+      ],
+      "maxProjects": 4,
+      "maxHighlightsPerItem": 3,
+      "engineeringBlocksExcluded": "`engineering` is web-only. It is depth for a reviewer who expanded a project, never resume copy.",
+      "privateBlocksExcluded": "Any key beginning with `_` is excluded from every output.",
+      "overflowStrategy": "Drop lowest-priority items first, then trim to maxHighlightsPerItem, then drop skills with no linked project or experience.",
+      "minPriority": 40
+    }
+  },
+  "site": {
+    "note": "Single view. No emphasis modes — the domain filter does the tailoring, and it is URL-addressable.",
+    "filterParam": "domain",
+    "shareableExample": "/?domain=graphics — send this with a graphics application; the grid opens pre-filtered.",
+    "disclosure": {
+      "layer1_scan": [
+        "tagline",
+        "team",
+        "skills",
+        "domains"
+      ],
+      "layer2_card": [
+        "summary",
+        "highlights"
+      ],
+      "layer3_expanded": [
+        "engineering",
+        "media",
+        "repoUrl"
+      ],
+      "note": "Layer 3 is collapsed by default and costs a scanning recruiter zero screen space. It exists only for the reviewer who chose to open it."
+    }
+  }
+}

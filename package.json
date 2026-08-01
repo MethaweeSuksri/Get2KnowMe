@@ -5,22 +5,25 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/check-resume.mjs",
     "start": "next start",
+    "resume": "node scripts/make-resume.mjs",
     "lint": "eslint"
   },
   "dependencies": {
     "next": "16.2.12",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@axe-core/puppeteer": "^4.12.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.12",
-    "tailwindcss": "^4",
+    "puppeteer": "^25.4.0",
     "typescript": "^5"
   }
 }

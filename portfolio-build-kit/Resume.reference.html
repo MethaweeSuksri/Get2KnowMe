@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    body { margin: 0; }
+    .res-h2 { font-size: 9.5pt; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; margin: 0 0 4px; padding-bottom: 2px; border-bottom: 1pt solid #000; color: #000; }
+    .res-item { margin: 0 0 5px; }
+    .res-row { display: flex; justify-content: space-between; gap: 10px; margin: 0; }
+    .res-title { font-weight: 700; }
+    .res-meta { color: #444; }
+    .res-list { margin: 1px 0 0; padding-left: 14px; }
+    .res-list li { margin-bottom: 0; }
+    .res-skill-line { margin: 0 0 1px; }
+    a.res-link { color: #1d4ed8; text-decoration: none; }
+    @media print {
+      .res-h2 { border-bottom-color: #000 !important; }
+    }
+  </style>
+</helmet>
+<style id="__om-edit-overrides"></style>
+<doc-page size="a4">
+<section class="page">
+<div style="padding:12mm 13mm; font-family:Arial, Helvetica, sans-serif; font-size:9.5pt; line-height:1.25; color:#111;">
+
+  <div style="margin-bottom:6px;">
+    <div style="font-size:16pt; font-weight:700; color:#000; line-height:1.1;">Methawee Suksri</div>
+    
+    <div style="font-size:9.5pt; color:#333;">Bangkok, Thailand · Available immediately</div>
+    <div style="font-size:9.5pt; color:#333;">methaweesuksri@gmail.com 098-828-0134<br><a class="res-link" href="https://www.linkedin.com/in/methawee-suksri-301852357">linkedin.com/in/methawee-suksri</a> · <a class="res-link" href="https://github.com/MethaweeSuksri">github.com/MethaweeSuksri</a> · <a class="res-link" href="https://github.com/Methawee6509611999">github.com/Methawee6509611999</a></div>
+  </div>
+
+  <p style="margin:0 0 6px; max-width:none;">Two software internships spanning C#/.NET desktop tooling and Python/C++ graphics development. Experienced across web, mobile, and desktop applications, with foundations in networking, operating systems, system design, and computer graphics.</p>
+
+  <div style="margin:8px 0 5px;">
+    <div class="res-h2">Education</div>
+    <div class="res-row"><span class="res-title">Bachelor of Science in Computer Science, Thammasat University</span><span class="res-meta">Aug 2022 – Jul 2026</span></div>
+    <div class="res-meta">First Class Honours · GPAX 3.75 / 4.0</div>
+  </div>
+
+  <div style="margin:8px 0 5px;">
+    <div class="res-h2">Experience</div>
+    <div class="res-item">
+      <div class="res-row"><span class="res-title">Yannix Co., Ltd. — Software Engineer Intern</span><span class="res-meta">Jan 2026 – May 2026</span></div>
+      <ul class="res-list">
+        <li>Developed features in Python and C++ against an internal MVC framework built on OpenGL and SDL, delivering production-ready code with accompanying unit tests.</li>
+        <li>Designed the logging data model and implemented instrumentation to track feature usage and adoption rate, then worked with the system administrator to surface it in ELK dashboards.</li>
+      </ul>
+    </div>
+    <div class="res-item">
+      <div class="res-row"><span class="res-title">Ruam Charoen Pattana Public Company Limited — IT Support &amp; Software Developer Intern</span><span class="res-meta">Jul 2025 – Dec 2025</span></div>
+      <ul class="res-list">
+        <li>Built an internal Windows workstation diagnostic tool in C# and .NET that remotely collects hardware and operating system data via WMI, wrapping raw WMI queries behind a GUI so support staff could run diagnostics without writing queries themselves.</li>
+        <li>Interviewed IT department staff to identify operational pain points, then scoped both technical and non-technical solutions against their requirements.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin:8px 0 5px;">
+    <div class="res-h2">Projects</div>
+
+    <div class="res-item">
+      <div class="res-row"><span class="res-title">RubHew — Campus delivery marketplace where students carry canteen orders back for each other</span><span class="res-meta">2025</span></div>
+      <div class="res-meta">Final project, CS369 Web Application Development · Team of 5, Lead · github.com/MethaweeSuksri/Rubhew</div>
+      <ul class="res-list">
+        <li>Designed and implemented the backend: an 18-endpoint API over route, controller and model layers, session authentication with bcrypt, and all database operations.</li>
+      </ul>
+      <div class="res-skill-line">JavaScript, Node.js, Express.js, MongoDB, Mongoose (ODM), React</div>
+    </div>
+
+    <div class="res-item">
+      <div class="res-row"><span class="res-title">Video Frame Stitching Tool — Panorama stitcher built from primitives: SIFT/ORB features, RANSAC homographies, feathered blending</span><span class="res-meta">2025</span></div>
+      <div class="res-meta">CS381 Digital Image Processing · Solo · github.com/MethaweeSuksri/VideoFrameStitching</div>
+      <ul class="res-list">
+        <li>Built a panorama stitcher from the underlying operations rather than a library stitcher: SIFT and ORB backends behind one interface, Lowe's ratio test over kNN matches, and RANSAC homography estimation per frame pair.</li>
+      </ul>
+      <div class="res-skill-line">Python, OpenCV, Image Stitching, Feature Detection &amp; Matching, Homography &amp; RANSAC, Digital Image Processing</div>
+    </div>
+
+    <div class="res-item">
+      <div class="res-row"><span class="res-title">Three.js Shooter — WebGL2 first-person shooter with rigid-body physics and continuous enemy spawning</span><span class="res-meta">2025</span></div>
+      <div class="res-meta">CS299 Web Application Development · Team of 3, Lead · github.com/Methawee6509611999/299-Project-Threejs-Shooter</div>
+      <ul class="res-list">
+        <li>Built the 3D renderer with Three.js on WebGL2 and integrated cannon-es for rigid-body physics, reconciling the render scene and the physics world every frame.</li>
+      </ul>
+      <div class="res-skill-line">JavaScript, Three.js, WebGL2, cannon-es, Physics Simulation, Graphics Rendering Pipeline</div>
+    </div>
+
+    <div class="res-item">
+      <div class="res-row"><span class="res-title">Begin OpenGL — C++ renderer built from scratch: GLSL shader pipeline, CMake build, textured geometry</span><span class="res-meta">2025</span></div>
+      <div class="res-meta">Personal project · Solo · github.com/MethaweeSuksri/Begin_OpenGl</div>
+      <ul class="res-list">
+        <li>Wrote the shader abstraction by hand: file loading with stream exception masks, compile and link with per-stage status checks and info-log reporting, and typed uniform setters.</li>
+      </ul>
+      <div class="res-skill-line">C/C++, OpenGL, GLSL, CMake, GLFW, GLM</div>
+    </div>
+  </div>
+
+  <div style="margin:8px 0 5px;">
+    <div class="res-h2">Skills</div>
+    <div class="res-skill-line"><strong>Programming Languages:</strong> Python, C/C++, Java, JavaScript, C#, GLSL</div>
+    <div class="res-skill-line"><strong>Web &amp; Backend Development:</strong> React, Node.js, Express.js, Mongoose (ODM), HTML &amp; CSS, RESTful API Design</div>
+    <div class="res-skill-line"><strong>Graphics, Imaging &amp; Real-Time Rendering:</strong> OpenGL, WebGL2, Three.js, cannon-es, SDL, GPU Programming</div>
+    <div class="res-skill-line"><strong>Databases &amp; Cloud:</strong> SQL, MongoDB, Database Design &amp; Implementation, Entity-Relationship Modeling</div>
+    <div class="res-skill-line"><strong>Tools &amp; Systems:</strong> Git &amp; GitHub, CMake, Make, ELK Stack, Linux (Debian), CI/CD</div>
+    <div class="res-skill-line"><strong>Computer Science Fundamentals:</strong> Data Structures &amp; Algorithms, State Machine Design, Mobile Application Development</div>
+    <div class="res-skill-line"><strong>Leadership &amp; Collaboration:</strong> Team Leadership, Sprint Planning, Deadline Management, Conflict Resolution, Cross-Functional Collaboration, Meeting Facilitation</div>
+  </div>
+
+  <div style="margin:8px 0 3px;">
+    <div class="res-h2">Leadership</div>
+    <div>Technical Team Lead — led four university project teams of 3-9 members; sprint planning, task distribution, deadline enforcement, conflict resolution.</div>
+  </div>
+
+</div>
+</section>
+</doc-page>
+<script src="./doc-page.js"></script>
+
+</x-dc>
+</body>
+</html>
