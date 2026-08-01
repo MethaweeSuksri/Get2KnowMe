@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { filterStore } from "./filterStore";
 
 export interface DomainOption {
   id: string;
@@ -11,7 +10,10 @@ export interface DomainOption {
 
 // The URL is the state: read with useSearchParams, write with router.replace.
 // Back button, reload, and shared links (/?domain=graphics) all work because
-// component state is never the source of truth.
+// component state is never the source of truth. The filter's effect on the
+// page is the data-filter attribute on <html>: an inline pre-hydration script
+// in app/page.tsx sets it before first paint so deep links open filtered, and
+// this component keeps it in sync afterwards.
 export default function DomainFilter({ domains }: { domains: DomainOption[] }) {
   const router = useRouter();
   const params = useSearchParams();
@@ -19,10 +21,21 @@ export default function DomainFilter({ domains }: { domains: DomainOption[] }) {
   const selected = (params.get("domain") ?? "")
     .split(",")
     .filter((id) => known.has(id));
+  const filterValue = selected.join(" ");
 
   useEffect(() => {
-    filterStore.set(selected.join(" "));
-  });
+    if (filterValue) {
+      document.documentElement.setAttribute("data-filter", filterValue);
+    } else {
+      document.documentElement.removeAttribute("data-filter");
+    }
+  }, [filterValue]);
+
+  // Client-side navigation away from the landing page must not leave the
+  // project-page chips dimmed by a stale filter attribute.
+  useEffect(() => {
+    return () => document.documentElement.removeAttribute("data-filter");
+  }, []);
 
   const toggle = (id: string) => {
     const next = selected.includes(id)

@@ -2,6 +2,7 @@
 // indexes every surface renders from. Imported by server components only.
 import "server-only";
 import raw from "@/portfolio.public.json";
+import { CATEGORY_COLORS, DOMAIN_COLORS } from "./theme";
 import type {
   Experience,
   Highlight,
@@ -58,6 +59,56 @@ function checkDomainRefs(ids: string[] | undefined, where: string): void {
 for (const skill of data.skills) {
   if (!categoryIds.has(skill.category)) {
     fail(`skill "${skill.id}" has unknown category "${skill.category}"`);
+  }
+}
+
+// Every domain/category id needs a colour token, or its dot renders invisibly.
+for (const d of data.domains) {
+  if (!(d.id in DOMAIN_COLORS)) {
+    fail(`domain "${d.id}" has no colour — add it to DOMAIN_COLORS in lib/theme.ts`);
+  }
+}
+for (const c of data.skillCategories) {
+  if (!(c.id in CATEGORY_COLORS)) {
+    fail(`skill category "${c.id}" has no colour — add it to CATEGORY_COLORS in lib/theme.ts`);
+  }
+}
+
+// A skill with neither evidence (a project/experience/leadership citing it)
+// nor a contexts line would dim the whole page on hover with nothing lit.
+{
+  const evidenced = new Set<string>();
+  for (const e of [...data.projects, ...data.experience, ...data.leadership]) {
+    e.skills.forEach((id) => evidenced.add(id));
+  }
+  for (const skill of data.skills) {
+    if (!evidenced.has(skill.id) && !skill.contexts?.length) {
+      fail(
+        `skill "${skill.id}" has no project/experience evidence and no "contexts" — give it contexts or cut it`,
+      );
+    }
+  }
+}
+
+const MONTH_RE = /^\d{4}-(0[1-9]|1[0-2])$/;
+
+function checkDates(start: string, end: string | null | undefined, where: string): void {
+  if (!MONTH_RE.test(start)) {
+    fail(`${where} has startDate "${start}" — expected "YYYY-MM"`);
+  }
+  if (end !== null && (typeof end !== "string" || !MONTH_RE.test(end))) {
+    fail(`${where} has endDate ${JSON.stringify(end)} — expected "YYYY-MM", or null for an ongoing range`);
+  }
+}
+
+for (const exp of data.experience) checkDates(exp.startDate, exp.endDate, `experience "${exp.id}"`);
+for (const edu of data.education) checkDates(edu.startDate, edu.endDate, `education "${edu.id}"`);
+
+for (const project of data.projects) {
+  if (project.repoUrl !== null && !/^https?:\/\//.test(project.repoUrl ?? "")) {
+    fail(
+      `project "${project.id}" has repoUrl ${JSON.stringify(project.repoUrl)} — expected an http(s) URL, or null for no public repo`,
+    );
   }
 }
 
@@ -168,11 +219,15 @@ export function formatMonth(iso: string): string {
   return `${MONTHS[Number(month) - 1]} ${year}`;
 }
 
-export const formatRange = (start: string, end: string): string =>
-  `${formatMonth(start)} – ${formatMonth(end)}`;
+export const formatRange = (start: string, end: string | null): string =>
+  `${formatMonth(start)} – ${end === null ? "Present" : formatMonth(end)}`;
 
 export const teamBadge = (team: { size: number; role: string }): string =>
   team.size === 1 ? "Solo" : `${team.role} · ${team.size}`;
+
+/** Résumé variant, matching the approved reference: "Team of 5, Lead". */
+export const resumeTeamBadge = (team: { size: number; role: string }): string =>
+  team.size === 1 ? "Solo" : `Team of ${team.size}, ${team.role.replace(/^Team\s+/, "")}`;
 
 const surfaceFilter = (allowed: Surface[]) => (s: { surface: Surface }) =>
   allowed.includes(s.surface);
@@ -180,19 +235,16 @@ const surfaceFilter = (allowed: Surface[]) => (s: { surface: Surface }) =>
 export const forWeb = surfaceFilter(["both", "web"]);
 
 // ---------------------------------------------------------------------------
-// Résumé model. Applies resume.rules plus the overflow strategy so the output
-// fits the one-page limit: résumé surfaces only, top `maxProjects` by priority,
-// highlights capped, and skills without linked evidence dropped.
+// Résumé model. Applies resume.rules so the output fits the one-page limit:
+// résumé surfaces only, top `maxProjects` by priority, per-type highlight
+// caps, and skills without linked evidence dropped. Every cap comes from the
+// data — the fit knobs live in resume.rules, not here.
 // ---------------------------------------------------------------------------
-
-const RESUME_PROJECT_HIGHLIGHTS = 1; // overflow trim: one bullet per project fits pageLimit 1
-const RESUME_TECH_LINE_SKILLS = 6;
-const RESUME_EXPERIENCE_HIGHLIGHTS = 2; // overflow trim below rules.maxHighlightsPerItem to hold pageLimit 1
 
 export interface ResumeModel {
   projects: (Project & { resumeHighlights: Highlight[]; techLine: string })[];
   experiences: (Experience & { resumeHighlights: Highlight[] })[];
-  leadership: Leadership[];
+  leadership: (Leadership & { resumeHighlights: Highlight[] })[];
   skillLines: { category: string; labels: string[] }[];
 }
 
@@ -205,9 +257,9 @@ export function buildResumeModel(): ResumeModel {
     .slice(0, rules.maxProjects)
     .map((p) => ({
       ...p,
-      resumeHighlights: p.highlights.filter(onResume).slice(0, RESUME_PROJECT_HIGHLIGHTS),
+      resumeHighlights: p.highlights.filter(onResume).slice(0, rules.maxHighlightsPerProject),
       techLine: p.skills
-        .slice(0, RESUME_TECH_LINE_SKILLS)
+        .slice(0, rules.maxSkillsPerProjectLine)
         .map((id) => skillById.get(id)!.label)
         .join(", "),
     }));
@@ -216,14 +268,15 @@ export function buildResumeModel(): ResumeModel {
     .filter((e) => onResume(e) && e.priority >= rules.minPriority)
     .map((e) => ({
       ...e,
-      resumeHighlights: e.highlights
-        .filter(onResume)
-        .slice(0, Math.min(rules.maxHighlightsPerItem, RESUME_EXPERIENCE_HIGHLIGHTS)),
+      resumeHighlights: e.highlights.filter(onResume).slice(0, rules.maxHighlightsPerExperience),
     }));
 
-  const resumeLeadership = leadership.filter(
-    (l) => onResume(l) && l.priority >= rules.minPriority,
-  );
+  const resumeLeadership = leadership
+    .filter((l) => onResume(l) && l.priority >= rules.minPriority)
+    .map((l) => ({
+      ...l,
+      resumeHighlights: l.highlights.filter(onResume).slice(0, rules.maxHighlightsPerLeadership),
+    }));
 
   const skillLines = data.skillCategories
     .map((category) => ({

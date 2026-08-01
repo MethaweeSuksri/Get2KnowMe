@@ -1,13 +1,28 @@
 import SkillChip from "./SkillChip";
-import { forWeb, skillCategories, skillsByCategory } from "@/lib/portfolio";
+import {
+  forWeb,
+  siteConfig,
+  skillCategories,
+  skillHasEvidence,
+  skillsByCategory,
+} from "@/lib/portfolio";
 
-// The rail always uses the full label, never shortLabel.
+// The rail always uses the full label, never shortLabel. It must never
+// inner-scroll (site.rail in the JSON governs what is trimmed to keep it
+// within a viewport): contexts-only skills are omitted, and excludeCategories
+// is the overflow ladder.
 export default function SkillsRail() {
+  const rail = siteConfig.rail;
+  const excluded = new Set(rail.excludeCategories);
+
   return (
     <aside className="rail" aria-label="Skills">
       <h2 className="section-title">Skills</h2>
       {skillCategories.map((cat) => {
-        const items = (skillsByCategory.get(cat.id) ?? []).filter(forWeb);
+        if (excluded.has(cat.id)) return null;
+        const items = (skillsByCategory.get(cat.id) ?? [])
+          .filter(forWeb)
+          .filter((s) => !rail.omitContextsOnlySkills || skillHasEvidence(s.id));
         if (items.length === 0) return null;
         return (
           <section key={cat.id} className="rail-cat">

@@ -58,7 +58,8 @@ export interface Education {
   degree: string;
   major: string;
   startDate: string;
-  endDate: string;
+  /** null = ongoing ("Present") */
+  endDate: string | null;
   status: string;
   gpax: number;
   gpaScale: number;
@@ -80,7 +81,8 @@ export interface Experience {
   company: string;
   role: string;
   startDate: string;
-  endDate: string;
+  /** null = ongoing ("Present") */
+  endDate: string | null;
   location: string;
   type: string;
   domains: string[];
@@ -115,7 +117,7 @@ export interface Project {
   context: string;
   year: number;
   domains: string[];
-  repoUrl: string;
+  repoUrl: string | null;
   demoUrl: string | null;
   media: string[];
   team: Team;
@@ -123,7 +125,6 @@ export interface Project {
   highlights: Highlight[];
   engineering: Engineering;
   skills: string[];
-  featured: boolean;
   surface: Surface;
   priority: number;
 }
@@ -142,7 +143,10 @@ export interface Leadership {
 export interface ResumeRules {
   includeSurfaces: Surface[];
   maxProjects: number;
-  maxHighlightsPerItem: number;
+  maxHighlightsPerProject: number;
+  maxHighlightsPerExperience: number;
+  maxHighlightsPerLeadership: number;
+  maxSkillsPerProjectLine: number;
   maxSkillsPerCategoryLine: number;
   engineeringBlocksExcluded: string;
   privateBlocksExcluded: string;
@@ -158,10 +162,17 @@ export interface ResumeConfig {
   rules: ResumeRules;
 }
 
+export interface RailConfig {
+  omitContextsOnlySkills: boolean;
+  excludeCategories: string[];
+  note?: string;
+}
+
 export interface SiteConfig {
   note: string;
   filterParam: string;
   shareableExample: string;
+  rail: RailConfig;
   disclosure: {
     layer1_scan: string[];
     layer2_card: string[];

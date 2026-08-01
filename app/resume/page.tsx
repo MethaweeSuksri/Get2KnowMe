@@ -4,7 +4,7 @@ import {
   education,
   formatRange,
   profile,
-  teamBadge,
+  resumeTeamBadge,
 } from "@/lib/portfolio";
 
 export const metadata: Metadata = {
@@ -95,8 +95,8 @@ export default function ResumePage() {
               <span className="res-meta">{project.year}</span>
             </div>
             <div className="res-meta">
-              {project.context} · {teamBadge(project.team)} ·{" "}
-              {stripUrl(project.repoUrl)}
+              {project.context} · {resumeTeamBadge(project.team)}
+              {project.repoUrl && <> · {stripUrl(project.repoUrl)}</>}
             </div>
             <ul className="res-list">
               {project.resumeHighlights.map((h) => (
@@ -122,11 +122,7 @@ export default function ResumePage() {
         {model.leadership.map((item) => (
           <div key={item.id}>
             <span className="res-title">{item.title}</span> —{" "}
-            {item.highlights
-              .filter((h) => h.surface === "both" || h.surface === "resume")
-              .slice(0, 1)
-              .map((h) => h.text)
-              .join(" ")}
+            {item.resumeHighlights.map((h) => h.text).join(" ")}
           </div>
         ))}
       </section>

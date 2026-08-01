@@ -402,22 +402,30 @@ a.chip:hover {
 }
 
 .chip:hover .tip,
-.chip:focus-visible .tip {
+.chip:focus-visible .tip,
+.chip[data-tip-open] .tip {
   display: block;
 }
 
 /* ---- skills rail ----------------------------------------------------- */
 
 .rail {
-  position: sticky;
-  top: var(--header-h);
-  max-height: calc(100vh - var(--header-h));
-  overflow-y: auto;
+  /* Never inner-scrolls: content the viewport can't hold is trimmed at the
+     data level (site.rail), not hidden behind a scrollbar. Sticky only when
+     the viewport is tall enough to hold the whole rail. */
+  position: static;
   padding: var(--gap-16) 0 var(--gap-16) var(--gap-16);
   border-left: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: var(--gap-16);
+}
+
+@media (min-width: 768px) and (min-height: 900px) {
+  .rail {
+    position: sticky;
+    top: var(--header-h);
+  }
 }
 
 .rail-cat {
@@ -720,9 +728,6 @@ a.res-link {
   }
 
   .rail {
-    position: static;
-    max-height: none;
-    overflow: visible;
     border-left: none;
     border-top: 1px solid var(--border);
     padding-left: 0;

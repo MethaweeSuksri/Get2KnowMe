@@ -1,7 +1,7 @@
 {
   "meta": {
-    "schemaVersion": "3.1.0",
-    "lastUpdated": "2026-07-29",
+    "schemaVersion": "3.3.0",
+    "lastUpdated": "2026-08-02",
     "note": "Single source of truth. The website, the resume PDF, and every emphasis mode are generated from this file. Do not duplicate content anywhere else."
   },
   "profile": {
@@ -909,7 +909,6 @@
         "sprint-plan",
         "deadline-mgmt"
       ],
-      "featured": true,
       "surface": "both",
       "priority": 90
     },
@@ -1014,7 +1013,6 @@
         "dsa",
         "linux"
       ],
-      "featured": true,
       "surface": "both",
       "priority": 88
     },
@@ -1094,7 +1092,6 @@
         "sprint-plan",
         "deadline-mgmt"
       ],
-      "featured": true,
       "surface": "both",
       "priority": 85
     },
@@ -1189,7 +1186,6 @@
         "gpu-prog",
         "linux"
       ],
-      "featured": true,
       "surface": "both",
       "priority": 75
     },
@@ -1284,7 +1280,6 @@
         "conflict-res",
         "meeting-fac"
       ],
-      "featured": false,
       "surface": "both",
       "priority": 70
     },
@@ -1368,7 +1363,6 @@
         "sprint-plan",
         "deadline-mgmt"
       ],
-      "featured": false,
       "surface": "both",
       "priority": 60
     }
@@ -1427,7 +1421,10 @@
         "resume"
       ],
       "maxProjects": 4,
-      "maxHighlightsPerItem": 3,
+      "maxHighlightsPerProject": 1,
+      "maxHighlightsPerExperience": 2,
+      "maxHighlightsPerLeadership": 1,
+      "maxSkillsPerProjectLine": 6,
       "engineeringBlocksExcluded": "`engineering` is web-only. It is depth for a reviewer who expanded a project, never resume copy.",
       "privateBlocksExcluded": "Any key beginning with `_` is excluded from every output.",
       "overflowStrategy": "Drop lowest-priority items first, then trim to maxHighlightsPerItem, then drop skills with no linked project or experience.",
@@ -1456,6 +1453,14 @@
         "repoUrl"
       ],
       "note": "Layer 3 is collapsed by default and costs a scanning recruiter zero screen space. It exists only for the reviewer who chose to open it."
+    },
+    "rail": {
+      "omitContextsOnlySkills": true,
+      "excludeCategories": [
+        "sdlc",
+        "leadership"
+      ],
+      "note": "The rail must never inner-scroll. Contexts-only skills (no project/experience evidence) are omitted; excludeCategories is the overflow ladder: sdlc first, then leadership."
     }
   }
 }

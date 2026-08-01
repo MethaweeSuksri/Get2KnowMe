@@ -1,17 +1,8 @@
+import { contactLinks } from "@/lib/contacts";
 import { education, formatRange, profile } from "@/lib/portfolio";
-
-const CONTACT_TEXT: Record<string, (value: string, label?: string) => string> = {
-  email: (value) => value,
-  linkedin: (_, label) => label ?? "LinkedIn",
-  github: (_, label) => `GitHub (${label ?? "GitHub"})`,
-  githubUniversity: (_, label) => `GitHub (${label ?? "GitHub"})`,
-};
 
 export default function IdentityBand() {
   const edu = education.find((e) => e.surface === "both" || e.surface === "web");
-  const contacts = Object.entries(profile.contact).filter(
-    ([, c]) => c.value !== null && (c.surface === "both" || c.surface === "web"),
-  );
 
   return (
     <section className="identity" aria-label="Identity">
@@ -30,18 +21,14 @@ export default function IdentityBand() {
           ·
         </span>
         <span>{profile.availability}</span>
-        {contacts.map(([key, c]) => {
-          const text = CONTACT_TEXT[key]?.(c.value!, c.label) ?? key;
-          const href = key === "email" ? `mailto:${c.value}` : c.value!;
-          return (
-            <span key={key}>
-              <span className="sep" aria-hidden="true">
-                ·{" "}
-              </span>
-              <a href={href}>{text}</a>
+        {contactLinks(["both", "web"]).map((c) => (
+          <span key={c.key}>
+            <span className="sep" aria-hidden="true">
+              ·{" "}
             </span>
-          );
-        })}
+            <a href={c.href}>{c.text}</a>
+          </span>
+        ))}
       </div>
     </section>
   );

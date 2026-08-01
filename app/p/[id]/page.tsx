@@ -50,9 +50,11 @@ export default async function ProjectPage({ params }: Props) {
           <span>
             {project.context} · {project.year}
           </span>
-          <a href={project.repoUrl} rel="noopener">
-            {repoDisplay(project.repoUrl)} ↗
-          </a>
+          {project.repoUrl && (
+            <a href={project.repoUrl} rel="noopener">
+              {repoDisplay(project.repoUrl)} ↗
+            </a>
+          )}
           {project.demoUrl && (
             <a href={project.demoUrl} rel="noopener">
               Live demo ↗

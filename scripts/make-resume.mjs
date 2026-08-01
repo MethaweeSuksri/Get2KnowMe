@@ -2,7 +2,8 @@
 // `npm run resume` and commit the PDF: public/ is copied at the start of the
 // deploying build, so that build cannot produce it.
 import { spawn } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { readFileSync, writeFileSync } from "node:fs";
 import { setTimeout as sleep } from "node:timers/promises";
 import puppeteer from "puppeteer";
 
@@ -79,7 +80,13 @@ try {
       `make-resume: PDF is ${pages} pages; resume.pageLimit is ${pageLimit}. Trim content.`,
     );
   }
-  console.log(`make-resume: wrote ${outPath} (${pages} page${pages === 1 ? "" : "s"}).`);
+  // Stamp the data the PDF was generated from; the postbuild check compares
+  // hashes, because mtimes are meaningless on a fresh clone (every CI build).
+  const hash = createHash("sha256")
+    .update(readFileSync("portfolio.public.json"))
+    .digest("hex");
+  writeFileSync("public/resume.stamp", `${hash}\n`);
+  console.log(`make-resume: wrote ${outPath} (${pages} page${pages === 1 ? "" : "s"}) and public/resume.stamp.`);
 } finally {
   try {
     process.kill(-server.pid, "SIGTERM");
