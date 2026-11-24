@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HighlightRoot from "@/components/HighlightRoot";
 import IdentityBand from "@/components/IdentityBand";
-import LeadershipBand from "@/components/LeadershipBand";
 import ProjectGrid from "@/components/ProjectGrid";
 import SkillsRail from "@/components/SkillsRail";
 import { domains } from "@/lib/portfolio";
@@ -46,7 +45,6 @@ export default function LandingPage() {
               </div>
               <SkillsRail />
             </div>
-            <LeadershipBand />
           </div>
         </HighlightRoot>
       </main>

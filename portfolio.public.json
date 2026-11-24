@@ -111,10 +111,6 @@
     {
       "id": "sdlc",
       "label": "Software Development Process"
-    },
-    {
-      "id": "leadership",
-      "label": "Leadership & Collaboration"
     }
   ],
   "skills": [
@@ -568,55 +564,6 @@
       "label": "Code Review",
       "category": "sdlc",
       "surface": "web"
-    },
-    {
-      "id": "team-lead",
-      "label": "Team Leadership",
-      "category": "leadership",
-      "surface": "both",
-      "shortLabel": "Team Lead"
-    },
-    {
-      "id": "sprint-plan",
-      "label": "Sprint Planning",
-      "category": "leadership",
-      "surface": "both",
-      "shortLabel": "Sprints"
-    },
-    {
-      "id": "deadline-mgmt",
-      "label": "Deadline Management",
-      "category": "leadership",
-      "surface": "both",
-      "shortLabel": "Deadlines"
-    },
-    {
-      "id": "conflict-res",
-      "label": "Conflict Resolution",
-      "category": "leadership",
-      "surface": "both",
-      "shortLabel": "Conflict Res."
-    },
-    {
-      "id": "collaboration",
-      "label": "Cross-Functional Collaboration",
-      "category": "leadership",
-      "surface": "both",
-      "shortLabel": "Collaboration"
-    },
-    {
-      "id": "meeting-fac",
-      "label": "Meeting Facilitation",
-      "category": "leadership",
-      "surface": "both",
-      "shortLabel": "Meetings"
-    },
-    {
-      "id": "req-gather",
-      "label": "Requirements Gathering",
-      "category": "leadership",
-      "surface": "both",
-      "shortLabel": "Req. Gathering"
     }
   ],
   "education": [
@@ -702,7 +649,6 @@
         {
           "text": "Owned features end to end, validating behavior with the QA tester and end users before release.",
           "skills": [
-            "collaboration",
             "testing-tech",
             "unit-testing"
           ],
@@ -736,7 +682,6 @@
         "unit-testing",
         "git",
         "db-design",
-        "collaboration",
         "testing-tech"
       ],
       "surface": "both",
@@ -770,9 +715,7 @@
         {
           "text": "Interviewed IT department staff to identify operational pain points, then scoped both technical and non-technical solutions against their requirements.",
           "skills": [
-            "req-gather",
-            "srs",
-            "collaboration"
+            "srs"
           ],
           "surface": "both"
         },
@@ -798,9 +741,7 @@
         "wmi",
         "mdm",
         "os-concepts",
-        "req-gather",
         "srs",
-        "collaboration",
         "cli-tools"
       ],
       "surface": "both",
@@ -808,6 +749,68 @@
     }
   ],
   "projects": [
+    {
+      "id": "handwritten-renderer",
+      "title": "HandwrittenRenderer",
+      "tagline": "Modular C++ rendering engine built with SDL3 and OpenGL",
+      "context": "Personal project",
+      "year": 2026,
+      "domains": [
+        "graphics",
+        "systems",
+        "tooling"
+      ],
+      "repoUrl": "https://github.com/MethaweeSuksri/HandWrittenRenderer",
+      "demoUrl": null,
+      "media": [],
+      "team": {
+        "size": 1,
+        "role": "Solo"
+      },
+      "summary": "Built a modular C++ rendering engine with separate camera, mesh, shader pipeline, texture, uniform-buffer, scene, and renderer components. Implemented textured mesh rendering and delta-time-based camera movement; mesh importing and further input work remain in progress.",
+      "highlights": [
+        {
+          "text": "Implemented an SDL3 and OpenGL rendering pipeline with reusable mesh, shader, texture, uniform-buffer, scene, and renderer components, then added keyboard camera movement scaled by frame delta time.",
+          "skills": [
+            "cpp",
+            "opengl",
+            "sdl",
+            "glm",
+            "render-pipe",
+            "gpu-prog"
+          ],
+          "surface": "both"
+        }
+      ],
+      "engineering": {
+        "architecture": "A C++23 application built with CMake and SDL3. The source separates camera, mesh, pipeline, shader program, texture, uniform buffer, scene, and renderer responsibilities. The renderer iterates the scene objects, uploads model/view/projection matrices through a uniform buffer, binds each object’s texture and pipeline, and draws its mesh.",
+        "decisions": [
+          {
+            "what": "Organized rendering around separate scene, renderer, camera, mesh, pipeline, texture, and uniform-buffer components.",
+            "why": "Keeps the current rendering flow divided into components with distinct responsibilities while the engine is being developed.",
+            "instead": "Keeping initialization, rendering, and resource handling together in the application entry point.",
+            "ref": "src/Scene.h; src/Renderer.h; src/main.cpp"
+          },
+          {
+            "what": "Updated camera movement using frame delta time.",
+            "why": "Movement distance is scaled by elapsed frame time rather than the number of rendered frames.",
+            "instead": "Applying a fixed movement amount on each frame.",
+            "ref": "src/main.cpp"
+          }
+        ]
+      },
+      "skills": [
+        "cpp",
+        "opengl",
+        "sdl",
+        "glm",
+        "render-pipe",
+        "gpu-prog",
+        "cmake"
+      ],
+      "surface": "both",
+      "priority": 100
+    },
     {
       "id": "rubhew",
       "title": "RubHew",
@@ -904,13 +907,10 @@
         "db-design",
         "state-machine",
         "code-review",
-        "testing-tech",
-        "team-lead",
-        "sprint-plan",
-        "deadline-mgmt"
+        "testing-tech"
       ],
       "surface": "both",
-      "priority": 90
+      "priority": 85
     },
     {
       "id": "video-stitching",
@@ -1014,7 +1014,7 @@
         "linux"
       ],
       "surface": "both",
-      "priority": 88
+      "priority": 95
     },
     {
       "id": "threejs-shooter",
@@ -1087,13 +1087,10 @@
         "cannonjs",
         "physics-sim",
         "render-pipe",
-        "dsa",
-        "team-lead",
-        "sprint-plan",
-        "deadline-mgmt"
+        "dsa"
       ],
       "surface": "both",
-      "priority": 85
+      "priority": 90
     },
     {
       "id": "begin-opengl",
@@ -1233,9 +1230,6 @@
         {
           "text": "Split schema ownership across a nine-person team while keeping the model coherent, resolving conflicting table designs before they reached implementation.",
           "skills": [
-            "team-lead",
-            "conflict-res",
-            "meeting-fac",
             "db-design"
           ],
           "surface": "web"
@@ -1274,11 +1268,7 @@
         "sql",
         "rest-api",
         "session-auth",
-        "server-rendering",
-        "team-lead",
-        "sprint-plan",
-        "conflict-res",
-        "meeting-fac"
+        "server-rendering"
       ],
       "surface": "both",
       "priority": 70
@@ -1358,48 +1348,13 @@
         "android-studio",
         "mobile-dev",
         "dsa",
-        "state-machine",
-        "team-lead",
-        "sprint-plan",
-        "deadline-mgmt"
+        "state-machine"
       ],
       "surface": "both",
       "priority": 60
     }
   ],
-  "leadership": [
-    {
-      "id": "team-leadership",
-      "title": "Technical Team Lead",
-      "context": "Four university project teams, ranging from 3 to 9 members",
-      "relatedProjects": [
-        "rubhew",
-        "threejs-shooter",
-        "library-web-app",
-        "werewolf-moderator"
-      ],
-      "highlights": [
-        {
-          "text": "Led four project teams ranging from 3 to 9 members, running sprint planning, distributing tasks, setting and enforcing deadlines, and facilitating meetings.",
-          "surface": "both"
-        },
-        {
-          "text": "Resolved scheduling and scope conflicts within teams while keeping delivery on schedule.",
-          "surface": "both"
-        }
-      ],
-      "skills": [
-        "team-lead",
-        "sprint-plan",
-        "deadline-mgmt",
-        "conflict-res",
-        "collaboration",
-        "meeting-fac"
-      ],
-      "surface": "both",
-      "priority": 70
-    }
-  ],
+  "leadership": [],
   "resume": {
     "fileName": "Methawee_Suksri_Resume.pdf",
     "pageLimit": 1,
@@ -1412,8 +1367,7 @@
       "education",
       "experience",
       "projects",
-      "skills",
-      "leadership"
+      "skills"
     ],
     "rules": {
       "includeSurfaces": [
@@ -1423,7 +1377,6 @@
       "maxProjects": 4,
       "maxHighlightsPerProject": 1,
       "maxHighlightsPerExperience": 2,
-      "maxHighlightsPerLeadership": 1,
       "maxSkillsPerProjectLine": 6,
       "engineeringBlocksExcluded": "`engineering` is web-only. It is depth for a reviewer who expanded a project, never resume copy.",
       "privateBlocksExcluded": "Any key beginning with `_` is excluded from every output.",
@@ -1457,10 +1410,9 @@
     "rail": {
       "omitContextsOnlySkills": true,
       "excludeCategories": [
-        "sdlc",
-        "leadership"
+        "sdlc"
       ],
-      "note": "The rail must never inner-scroll. Contexts-only skills (no project/experience evidence) are omitted; excludeCategories is the overflow ladder: sdlc first, then leadership."
+      "note": "The rail must never inner-scroll. Contexts-only skills (no project/experience evidence) are omitted; excludeCategories is the overflow ladder: sdlc."
     }
   }
 }

@@ -90,7 +90,14 @@ export default function ResumePage() {
           <div className="res-item" key={project.id}>
             <div className="res-row">
               <span className="res-title">
-                {project.title} — {project.tagline}
+                {project.repoUrl ? (
+                  <a className="res-link" href={project.repoUrl}>
+                    {project.title}
+                  </a>
+                ) : (
+                  project.title
+                )}{" "}
+                — {project.tagline}
               </span>
               <span className="res-meta">{project.year}</span>
             </div>
@@ -117,15 +124,6 @@ export default function ResumePage() {
         ))}
       </section>
 
-      <section className="res-section" style={{ marginBottom: 3 }}>
-        <h2 className="res-h2">Leadership</h2>
-        {model.leadership.map((item) => (
-          <div key={item.id}>
-            <span className="res-title">{item.title}</span> —{" "}
-            {item.resumeHighlights.map((h) => h.text).join(" ")}
-          </div>
-        ))}
-      </section>
     </main>
   );
 }
