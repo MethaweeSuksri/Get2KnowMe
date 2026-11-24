@@ -17,7 +17,13 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       <div className="card-head">
         <h3 className="card-title">
-          <Link href={`/p/${project.id}`}>{project.title}</Link>
+          {project.repoUrl ? (
+            <a href={project.repoUrl} target="_blank" rel="noreferrer">
+              {project.title}
+            </a>
+          ) : (
+            <Link href={`/p/${project.id}`}>{project.title}</Link>
+          )}
         </h3>
         <span className="domain-dots" aria-hidden="true">
           {project.domains.map((d) => (
